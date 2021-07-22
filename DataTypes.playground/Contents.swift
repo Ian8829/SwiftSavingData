@@ -56,3 +56,19 @@ let savedFavoriteBytes = Array(savedFavoriteBytesData)
 favoriteBytes == savedFavoriteBytes
 favoriteBytesData == savedFavoriteBytesData
 
+
+// String
+try favoriteBytesData.write(to:favoriteBytesURL.appendingPathExtension("txt"))
+let string = String(data: savedFavoriteBytesData, encoding: .utf8)!
+
+let catsURL = URL(
+	fileURLWithPath: "Cats.txt",
+	relativeTo: FileManager.documentsDirectoryURL
+)
+
+try string.write(
+	to: catsURL,
+	atomically: true,
+	encoding: .utf8
+)
+let catsChallengeString = try String(contentsOf: catsURL)
