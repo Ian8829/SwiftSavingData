@@ -75,6 +75,11 @@ struct ContentView: View {
 			print(task)
 			
 			let prioritizedTaskData = try Data(contentsOf: prioritizedTaskJSONURL)
+			let prioritizedTask = try decoder.decode(
+				TaskStore.PrioritizedTasks.self,
+				from: prioritizedTaskData
+			)
+			print(prioritizedTask)
 		} catch let error {
 			print(error)
 		}
