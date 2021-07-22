@@ -1,3 +1,5 @@
+import Foundation
+
 // Integers
 let age: UInt8 = 32
 MemoryLayout.size(ofValue: age)
@@ -38,3 +40,19 @@ let favoriteBytes: [UInt8] = [
 ]
 
 MemoryLayout<UInt8>.size * favoriteBytes.count
+
+
+// Saving & Loading Data
+let favoriteBytesData = Data(favoriteBytes)
+let favoriteBytesURL = URL(
+	fileURLWithPath: "Favorite Bytes",
+	relativeTo: FileManager.documentsDirectoryURL
+)
+
+try favoriteBytesData.write(to: favoriteBytesURL)
+let savedFavoriteBytesData = try Data(contentsOf: favoriteBytesURL)
+let savedFavoriteBytes = Array(savedFavoriteBytesData)
+
+favoriteBytes == savedFavoriteBytes
+favoriteBytesData == savedFavoriteBytesData
+
