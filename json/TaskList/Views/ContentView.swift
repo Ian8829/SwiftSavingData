@@ -54,6 +54,9 @@ struct ContentView: View {
     .sheet(isPresented: $modalIsPresented) {
       NewTaskView(taskStore: self.taskStore)
     }
+		.onAppear() {
+			self.loadJSON()
+		}
   }
 	
 	private func loadJSON() {
