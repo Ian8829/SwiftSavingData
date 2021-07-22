@@ -60,26 +60,26 @@ struct ContentView: View {
   }
 	
 	private func loadJSON() {
-		guard let taskJSONURL = Bundle.main.url(forResource: "Task", withExtension: "json"),
-					let prioritizedTaskJSONURL = Bundle
+		guard let tasksJSONURL = Bundle.main.url(forResource: "Tasks", withExtension: "json"),
+					let prioritizedTasksJSONURL = Bundle
 						.main
-						.url(forResource: "PrioritizedTask", withExtension: "json") else {
+						.url(forResource: "PrioritizedTasks", withExtension: "json") else {
 			return
 		}
 		
 		let decoder = JSONDecoder()
 		
 		do {
-			let taskData = try Data(contentsOf: taskJSONURL)
-			let task = try decoder.decode(Task.self, from: taskData)
-			print(task)
+			let tasksData = try Data(contentsOf: tasksJSONURL)
+			let tasks = try decoder.decode(Task.self, from: tasksData)
+			print(tasks)
 			
-			let prioritizedTaskData = try Data(contentsOf: prioritizedTaskJSONURL)
-			let prioritizedTask = try decoder.decode(
+			let prioritizedTasksData = try Data(contentsOf: prioritizedTasksJSONURL)
+			let prioritizedTasks = try decoder.decode(
 				TaskStore.PrioritizedTasks.self,
-				from: prioritizedTaskData
+				from: prioritizedTasksData
 			)
-			print(prioritizedTask)
+			print(prioritizedTasks)
 		} catch let error {
 			print(error)
 		}
