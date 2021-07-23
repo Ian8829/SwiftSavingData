@@ -41,6 +41,12 @@ class TaskStore: ObservableObject {
 	}
 	
 	private func loadJSONPrioritizedTasks() {
+		print(Bundle.main.bundleURL)
+		print(FileManager.documentsDirectoryURL)
+		
+		let temporaryDirectoryURL = FileManager.default.temporaryDirectory
+		print(temporaryDirectoryURL)
+		
 		guard let tasksJSONURL = Bundle.main.url(forResource: "PrioritizedTasks", withExtension: "json") else {
 			return
 		}
