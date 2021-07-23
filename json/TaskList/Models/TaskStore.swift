@@ -37,7 +37,7 @@ class TaskStore: ObservableObject {
 	
 	@Published var prioritizedTasks: [PrioritizedTasks] = []	{
 		didSet {
-			saveJSONPrioritizedTask()
+			saveJSONPrioritizedTasks()
 		}
 	}
 	
@@ -67,14 +67,13 @@ class TaskStore: ObservableObject {
 		
 		do {
 			let tasksData = try Data(contentsOf: tasksJSONURL)
-			
 			prioritizedTasks = try decoder.decode([PrioritizedTasks].self, from: tasksData)
 		} catch let error {
 			print(error)
 		}
 	}
 	
-	private func saveJSONPrioritizedTask() {
+	private func saveJSONPrioritizedTasks() {
 		let encoder = JSONEncoder()
 		
 		do {
