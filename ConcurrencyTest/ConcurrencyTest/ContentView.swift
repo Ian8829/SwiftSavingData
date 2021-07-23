@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView: View {
 	let operation = CalculatePrimeOperation()
@@ -27,13 +28,20 @@ struct ContentView: View {
 	}
 	
 	func calculatePrimes() {
-		let queue = OperationQueue()
-		queue.addOperation {
+		DispatchQueue.global(qos: .userInitiated).async {
 			for number in 0...1_000_000 {
 				let isPrimeNumber = self.isPrime(number: number)
 				print("\(number) is prime: \(isPrimeNumber)")
 			}
 		}
+		
+//		let queue = OperationQueue()
+//		queue.addOperation {
+//			for number in 0...1_000_000 {
+//				let isPrimeNumber = self.isPrime(number: number)
+//				print("\(number) is prime: \(isPrimeNumber)")
+//			}
+//		}
 	}
 	
 	func isPrime(number: Int) -> Bool {
