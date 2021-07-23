@@ -18,9 +18,22 @@ class MediaQuery: ObservableObject {
 		$itunesQuery
 			.debounce(for: .milliseconds(700), scheduler: RunLoop.main)
 			.removeDuplicates()
-			.sink(receiveValue: { value in
-				print(value)
-			})
+			.compactMap { query in
+				let searchUrl = "https://itunes.apple.com/search?media=music&entity=song&term=\(query)"
+				return URL(string: searchUrl)
+			}
+			.flatMap(fetchMusic)
+			.receive(on: DispatchQueue.main)
+			.assign(to: \.searchResults, on: self)
 			.store(in: &subscriptions)
+	}
+	
+	func fetchMusic(for url: URL) -> AnyPublisher<[MusicItem], Never> {
+		URLSession.shared.dataTaskPublisher(for: url)
+			.map(\.data)
+			.decode(type: MediaResponse.self, decoder: JSONDecoder())
+			.map(\.results)
+			.replaceError(with: [])
+			.eraseToAnyPublisher()
 	}
 }
