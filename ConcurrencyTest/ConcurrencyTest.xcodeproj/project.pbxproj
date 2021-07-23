@@ -13,6 +13,7 @@
 		B3D26AA826AA88B900CFC91E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3D26AA726AA88B900CFC91E /* Preview Assets.xcassets */; };
 		B3D26AB326AA88B900CFC91E /* ConcurrencyTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D26AB226AA88B900CFC91E /* ConcurrencyTestTests.swift */; };
 		B3D26ABE26AA88B900CFC91E /* ConcurrencyTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D26ABD26AA88B900CFC91E /* ConcurrencyTestUITests.swift */; };
+		B3D26ACC26AA8C8200CFC91E /* CalculatePrimeOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D26ACB26AA8C8200CFC91E /* CalculatePrimeOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		B3D26AB926AA88B900CFC91E /* ConcurrencyTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcurrencyTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D26ABD26AA88B900CFC91E /* ConcurrencyTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyTestUITests.swift; sourceTree = "<group>"; };
 		B3D26ABF26AA88B900CFC91E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3D26ACB26AA8C8200CFC91E /* CalculatePrimeOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePrimeOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				B3D26AA426AA88B900CFC91E /* Assets.xcassets */,
 				B3D26AA926AA88B900CFC91E /* Info.plist */,
 				B3D26AA626AA88B900CFC91E /* Preview Content */,
+				B3D26ACB26AA8C8200CFC91E /* CalculatePrimeOperation.swift */,
 			);
 			path = ConcurrencyTest;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3D26AA326AA88B600CFC91E /* ContentView.swift in Sources */,
+				B3D26ACC26AA8C8200CFC91E /* CalculatePrimeOperation.swift in Sources */,
 				B3D26AA126AA88B600CFC91E /* ConcurrencyTestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
