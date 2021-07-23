@@ -13,4 +13,14 @@ class MediaQuery: ObservableObject {
 	@Published var itunesQuery = ""
 	@Published var searchResults: [MusicItem] = []
 	var subscriptions: Set<AnyCancellable> = []
+	
+	init() {
+		$itunesQuery
+			.debounce(for: .milliseconds(700), scheduler: RunLoop.main)
+			.removeDuplicates()
+			.sink(receiveValue: { value in
+				print(value)
+			})
+			.store(in: &subscriptions)
+	}
 }
