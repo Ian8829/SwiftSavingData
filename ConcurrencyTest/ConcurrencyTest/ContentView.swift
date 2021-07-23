@@ -10,38 +10,39 @@ import Combine
 
 struct ContentView: View {
 	let operation = CalculatePrimeOperation()
+	@State private var calculationDisabled = false
 	
 	var body: some View {
 		VStack {
 			Spacer()
+			
 			DatePicker(
 				selection: .constant(Date()),
 				label: { Text("Date") }
 			)
 				.labelsHidden()
+			
 			Button(
 				action: calculatePrimes,
 				label: { Text("Calculate Primes") }
 			)
+				.disabled(calculationDisabled)
+			
 			Spacer()
 		}
 	}
 	
 	func calculatePrimes() {
+		calculationDisabled = true
+		
 		DispatchQueue.global(qos: .userInitiated).async {
 			for number in 0...1_000_000 {
 				let isPrimeNumber = self.isPrime(number: number)
 				print("\(number) is prime: \(isPrimeNumber)")
 			}
+			
+			self.calculationDisabled = false
 		}
-		
-//		let queue = OperationQueue()
-//		queue.addOperation {
-//			for number in 0...1_000_000 {
-//				let isPrimeNumber = self.isPrime(number: number)
-//				print("\(number) is prime: \(isPrimeNumber)")
-//			}
-//		}
 	}
 	
 	func isPrime(number: Int) -> Bool {
