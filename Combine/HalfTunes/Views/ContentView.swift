@@ -34,11 +34,12 @@ import SwiftUI
 import Combine
 
 struct ContentView: View {
+	@ObservedObject var mediaQuery = MediaQuery()
   
   var body: some View {
     NavigationView {
       VStack {
-        TextField("Search", text: .constant("Search"))
+				TextField("Search", text: $mediaQuery.itunesQuery)
           .textFieldStyle(RoundedBorderTextFieldStyle())
           .padding()
         Spacer()
