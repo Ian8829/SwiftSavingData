@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B3D26ACE26AAA1CE00CFC91E /* MediaQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D26ACD26AAA1CE00CFC91E /* MediaQuery.swift */; };
+		B3D26AD226AAAFA200CFC91E /* ArtistQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D26AD026AAAFA200CFC91E /* ArtistQuery.swift */; };
+		B3D26AD326AAAFA200CFC91E /* MediaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D26AD126AAAFA200CFC91E /* MediaResponse.swift */; };
+		B3D26AD626AAAFC000CFC91E /* SongDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D26AD526AAAFC000CFC91E /* SongDetailView.swift */; };
 		D36E7F8D24200A1800C411FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E7F8C24200A1800C411FA /* AppDelegate.swift */; };
 		D36E7F8F24200A1800C411FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E7F8E24200A1800C411FA /* SceneDelegate.swift */; };
 		D36E7F9124200A1800C411FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E7F9024200A1800C411FA /* ContentView.swift */; };
@@ -19,6 +22,9 @@
 
 /* Begin PBXFileReference section */
 		B3D26ACD26AAA1CE00CFC91E /* MediaQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaQuery.swift; sourceTree = "<group>"; };
+		B3D26AD026AAAFA200CFC91E /* ArtistQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistQuery.swift; sourceTree = "<group>"; };
+		B3D26AD126AAAFA200CFC91E /* MediaResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaResponse.swift; sourceTree = "<group>"; };
+		B3D26AD526AAAFC000CFC91E /* SongDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongDetailView.swift; sourceTree = "<group>"; };
 		D36E7F8924200A1800C411FA /* HalfTunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HalfTunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36E7F8C24200A1800C411FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D36E7F8E24200A1800C411FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +47,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B3D26ACF26AAAFA200CFC91E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B3D26AD026AAAFA200CFC91E /* ArtistQuery.swift */,
+				B3D26AD126AAAFA200CFC91E /* MediaResponse.swift */,
+			);
+			name = Model;
+			path = "../../../../../Downloads/video-nurls-materials-versions-5.0/27-group-requests/starter/HalfTunes/HalfTunes/Model";
+			sourceTree = "<group>";
+		};
+		B3D26AD426AAAFC000CFC91E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B3D26AD526AAAFC000CFC91E /* SongDetailView.swift */,
+			);
+			name = Views;
+			path = "../../../../../Downloads/video-nurls-materials-versions-5.0/27-group-requests/starter/HalfTunes/HalfTunes/Views";
+			sourceTree = "<group>";
+		};
 		D36E7F8024200A1800C411FA = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +85,8 @@
 		D36E7F8B24200A1800C411FA /* HalfTunes */ = {
 			isa = PBXGroup;
 			children = (
+				B3D26AD426AAAFC000CFC91E /* Views */,
+				B3D26ACF26AAAFA200CFC91E /* Model */,
 				F5FA5851243F081800B1CB3A /* MediaResponse.swift */,
 				D36E7F9024200A1800C411FA /* ContentView.swift */,
 				B3D26ACD26AAA1CE00CFC91E /* MediaQuery.swift */,
@@ -153,9 +180,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5FA5852243F081800B1CB3A /* MediaResponse.swift in Sources */,
+				B3D26AD226AAAFA200CFC91E /* ArtistQuery.swift in Sources */,
 				D36E7F8D24200A1800C411FA /* AppDelegate.swift in Sources */,
 				B3D26ACE26AAA1CE00CFC91E /* MediaQuery.swift in Sources */,
+				B3D26AD626AAAFC000CFC91E /* SongDetailView.swift in Sources */,
 				D36E7F8F24200A1800C411FA /* SceneDelegate.swift in Sources */,
+				B3D26AD326AAAFA200CFC91E /* MediaResponse.swift in Sources */,
 				D36E7F9124200A1800C411FA /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
