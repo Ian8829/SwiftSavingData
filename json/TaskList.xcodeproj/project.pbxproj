@@ -27,6 +27,8 @@
 		556EF3AC2330849700FD33A9 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556EF3AB2330849700FD33A9 /* FileManager.swift */; };
 		5589F393233061D4008D3719 /* Task.json in Resources */ = {isa = PBXBuildFile; fileRef = 5589F392233061D4008D3719 /* Task.json */; };
 		5589F395233063AA008D3719 /* PrioritizedTask.json in Resources */ = {isa = PBXBuildFile; fileRef = 5589F394233063AA008D3719 /* PrioritizedTask.json */; };
+		B3D26A9126AA61C100CFC91E /* PrioritizedTasks.json in Resources */ = {isa = PBXBuildFile; fileRef = B3D26A9026AA61C100CFC91E /* PrioritizedTasks.json */; };
+		B3D26A9326AA61C700CFC91E /* Tasks.json in Resources */ = {isa = PBXBuildFile; fileRef = B3D26A9226AA61C700CFC91E /* Tasks.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		556EF3AB2330849700FD33A9 /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		5589F392233061D4008D3719 /* Task.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Task.json; sourceTree = "<group>"; };
 		5589F394233063AA008D3719 /* PrioritizedTask.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PrioritizedTask.json; sourceTree = "<group>"; };
+		B3D26A9026AA61C100CFC91E /* PrioritizedTasks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PrioritizedTasks.json; path = "../../../../../../Downloads/video-sdios-materials-versions-5.0/13-saving-on-device/Starter/TaskList/Resources/PrioritizedTasks.json"; sourceTree = "<group>"; };
+		B3D26A9226AA61C700CFC91E /* Tasks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Tasks.json; path = "../../../../../../Downloads/video-sdios-materials-versions-5.0/13-saving-on-device/Starter/TaskList/Resources/Tasks.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +156,9 @@
 			children = (
 				49A2856622DC34F700B65A77 /* Assets.xcassets */,
 				5589F392233061D4008D3719 /* Task.json */,
+				B3D26A9226AA61C700CFC91E /* Tasks.json */,
 				5589F394233063AA008D3719 /* PrioritizedTask.json */,
+				B3D26A9026AA61C100CFC91E /* PrioritizedTasks.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -223,10 +229,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3D26A9126AA61C100CFC91E /* PrioritizedTasks.json in Resources */,
 				5589F393233061D4008D3719 /* Task.json in Resources */,
 				49A2856D22DC34F700B65A77 /* LaunchScreen.storyboard in Resources */,
 				5589F395233063AA008D3719 /* PrioritizedTask.json in Resources */,
 				49A2856A22DC34F700B65A77 /* Preview Assets.xcassets in Resources */,
+				B3D26A9326AA61C700CFC91E /* Tasks.json in Resources */,
 				49A2856722DC34F700B65A77 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

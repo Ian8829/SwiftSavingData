@@ -29,19 +29,19 @@
 import Combine
 import Foundation
 
-class TaskStore: ObservableObject {    
+class TaskStore: ObservableObject {
 	@Published var prioritizedTasks: [PrioritizedTasks] = []
 	
 	init() {
 		loadJSONPrioritizedTasks()
 	}
-  
-  func getIndex(for priority: Task.Priority) -> Int {
-    prioritizedTasks.firstIndex { $0.priority == priority }!
-  }
+	
+	func getIndex(for priority: Task.Priority) -> Int {
+		prioritizedTasks.firstIndex { $0.priority == priority }!
+	}
 	
 	private func loadJSONPrioritizedTasks() {
-		guard let tasksJSONURL = Bundle.main.url(forResource: "PrioritizedTasks",withExtension: "json") else {
+		guard let tasksJSONURL = Bundle.main.url(forResource: "PrioritizedTasks", withExtension: "json") else {
 			return
 		}
 		
@@ -51,8 +51,6 @@ class TaskStore: ObservableObject {
 			let tasksData = try Data(contentsOf: tasksJSONURL)
 			
 			prioritizedTasks = try decoder.decode([PrioritizedTasks].self, from: tasksData)
-			
-			print(prioritizedTasks)
 		} catch let error {
 			print(error)
 		}
@@ -60,10 +58,11 @@ class TaskStore: ObservableObject {
 }
 
 private extension TaskStore.PrioritizedTasks {
-  init(priority: Task.Priority, names: [String]) {
-    self.init(
-      priority: priority,
-      tasks: names.map { Task(name: $0) }
-    )
-  }
+	init(priority: Task.Priority, names: [String]) {
+		self.init(
+			priority: priority,
+			tasks: names.map { Task(name: $0) }
+		)
+	}
 }
+
