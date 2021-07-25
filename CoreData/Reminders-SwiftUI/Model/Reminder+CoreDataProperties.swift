@@ -31,6 +31,7 @@
 /// THE SOFTWARE.
 
 import CoreData
+import SwiftUI
 
 extension Reminder {
 	@NSManaged var title: String
@@ -59,5 +60,9 @@ extension Reminder {
 			let nserror = error as NSError
 			fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
 		}
+	}
+	
+	static func basicFetchRequest() -> FetchRequest<Reminder> {
+		FetchRequest(entity: Reminder.entity(), sortDescriptors: [])
 	}
 }
